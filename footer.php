@@ -5,7 +5,7 @@
                 <div class="flex items-center mb-6">
                     <img src="img/holwar-logo-wide.png" alt="HOLWAR Logo" class="h-8 w-auto object-contain" loading="lazy">
                 </div>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="footer.desc">
                     Najbardziej przyjazna i niezawodna pomoc drogowa w Warszawie. Dostępni 365 dni w roku, 24/7, bez
                     względu na pogodę.
                 </p>
@@ -21,33 +21,33 @@
                 </div>
             </div>
             <div>
-                <h5 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Usługi</h5>
+                <h5 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary" data-i18n="footer.services_col">Usługi</h5>
                 <ul class="space-y-4 text-sm text-slate-400">
-                    <li><a class="hover:text-white transition-colors" href="index.php#services">Holowanie Warszawa</a>
+                    <li><a class="hover:text-white transition-colors" href="index.php#services" data-i18n="services.towing_title">Holowanie 24/7</a>
                     </li>
-                    <li><a class="hover:text-white transition-colors" href="index.php#services">Mobilny Serwis Opon</a>
+                    <li><a class="hover:text-white transition-colors" href="index.php#services" data-i18n="services.tires_title">Mobilny Serwis Opon</a>
                     </li>
-                    <li><a class="hover:text-white transition-colors" href="index.php#services">Awaryjne Odpalanie</a>
+                    <li><a class="hover:text-white transition-colors" href="index.php#services" data-i18n="services.jump_title">Awaryjne Odpalanie</a>
                     </li>
-                    <li><a class="hover:text-white transition-colors" href="index.php#services">Dowóz Paliwa</a></li>
-                    <li><a class="hover:text-white transition-colors" href="autokasacja.php">Autokasacja i Złomowanie</a></li>
-                    <li><a class="hover:text-white transition-colors" href="pomoc-drogowa-tir.php">Mobilny Serwis TIR &amp; Naprawa</a></li>
-                    <li><a class="hover:text-white transition-colors" href="pomoc-drogowa-bus.php">Pomoc Drogowa BUS &amp; Dostawcze</a></li>
-                    <li><a class="hover:text-white transition-colors" href="wulkanizacja-mobilna.php">Wulkanizacja Mobilna TIR &amp; BUS</a></li>
+                    <li><a class="hover:text-white transition-colors" href="index.php#services" data-i18n="services.fuel_title">Dowóz Paliwa</a></li>
+                    <li><a class="hover:text-white transition-colors" href="autokasacja.php" data-i18n="nav.autokasacja">Autokasacja i Złomowanie</a></li>
+                    <li><a class="hover:text-white transition-colors" href="pomoc-drogowa-tir.php" data-i18n="nav.tir">Mobilny Serwis TIR &amp; Naprawa</a></li>
+                    <li><a class="hover:text-white transition-colors" href="pomoc-drogowa-bus.php" data-i18n="nav.bus">Pomoc Drogowa BUS &amp; Dostawcze</a></li>
+                    <li><a class="hover:text-white transition-colors" href="wulkanizacja-mobilna.php" data-i18n="nav.wulkanizacja">Wulkanizacja Mobilna TIR &amp; BUS</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Firma</h5>
+                <h5 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary" data-i18n="footer.company_col">Firma</h5>
                 <ul class="space-y-4 text-sm text-slate-400">
-                    <li><a class="hover:text-white transition-colors" href="index.php#about">O nas</a></li>
-                    <li><a class="hover:text-white transition-colors" href="#">Program Partnerski</a></li>
-                    <li><a class="hover:text-white transition-colors" href="oferta.php">Oferta</a></li>
-                    <li><a class="hover:text-white transition-colors" href="polityka-prywatnosci.php">Polityka
+                    <li><a class="hover:text-white transition-colors" href="index.php#about" data-i18n="nav.about">O nas</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#" data-i18n="footer.partner_program">Program Partnerski</a></li>
+                    <li><a class="hover:text-white transition-colors" href="oferta.php" data-i18n="nav.oferta">Oferta</a></li>
+                    <li><a class="hover:text-white transition-colors" href="polityka-prywatnosci.php" data-i18n="footer.privacy_policy">Polityka
                             Prywatności</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Kontakt</h5>
+                <h5 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary" data-i18n="footer.contact_col">Kontakt</h5>
                 <ul class="space-y-4 text-sm text-slate-400">
                     <li class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-primary">call</span>
@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="border-t border-white/5 py-12">
-            <h6 class="text-xs font-bold uppercase tracking-widest text-primary mb-8 text-center">Obszar działania -
+            <h6 class="text-xs font-bold uppercase tracking-widest text-primary mb-8 text-center" data-i18n="footer.area_heading">Obszar działania -
                 Pomoc Drogowa i Laweta</h6>
             <div
                 class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-4 text-[10px] text-slate-500 uppercase font-semibold">
@@ -107,7 +107,7 @@
             </div>
         </div>
         <div class="border-t border-white/5 pt-10 text-center">
-            <p class="text-xs text-slate-500">
+            <p class="text-xs text-slate-500" data-i18n="footer.rights">
                 © 2024 DG ARK. Wszelkie prawa zastrzeżone.
             </p>
         </div>
@@ -187,3 +187,4 @@
         });
     })();
 </script>
+<script src="js/i18n.js"></script>

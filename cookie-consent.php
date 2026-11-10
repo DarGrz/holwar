@@ -7,8 +7,8 @@
                 <span class="material-symbols-outlined">cookie</span>
             </div>
             <div>
-                <h4 class="text-white font-bold text-lg">Polityka Cookies</h4>
-                <p class="text-slate-400 text-sm leading-relaxed mt-1">
+                <h4 class="text-white font-bold text-lg" data-i18n="cookie.title">Polityka Cookies</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mt-1" data-i18n="cookie.desc">
                     Używamy plików cookies, aby zoptymalizować działanie strony, analizować ruch przez Google Analytics
                     oraz dostosowywać reklamy Meta Pixel.
                 </p>
@@ -16,16 +16,16 @@
         </div>
         <div class="flex flex-col gap-3">
             <div class="flex gap-3">
-                <button id="accept-all-cookies"
+                <button id="accept-all-cookies" data-i18n="cookie.accept"
                     class="flex-1 bg-primary text-background-dark font-800 py-3 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all text-sm">
                     Akceptuj wszystkie
                 </button>
-                <button id="customize-cookies"
+                <button id="customize-cookies" data-i18n="cookie.customize"
                     class="flex-1 bg-white/5 text-white border border-white/10 font-bold py-3 rounded-xl hover:bg-white/10 transition-all text-sm text-center">
                     Ustawienia
                 </button>
             </div>
-            <button id="reject-all-cookies" class="text-slate-500 text-xs hover:text-white transition-colors py-1">
+            <button id="reject-all-cookies" data-i18n="cookie.reject" class="text-slate-500 text-xs hover:text-white transition-colors py-1">
                 Tylko niezbędne
             </button>
         </div>
@@ -34,8 +34,8 @@
         <div id="cookie-settings" class="hidden mt-6 pt-6 border-t border-white/10 space-y-4">
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-white text-sm font-bold">Niezbędne</p>
-                    <p class="text-xs text-slate-500">Wymagane do działania strony.</p>
+                    <p class="text-white text-sm font-bold" data-i18n="cookie.necessary">Niezbędne</p>
+                    <p class="text-xs text-slate-500" data-i18n="cookie.necessary_desc">Wymagane do działania strony.</p>
                 </div>
                 <div class="relative inline-flex items-center cursor-not-allowed">
                     <input type="checkbox" checked disabled class="sr-only peer">
@@ -46,8 +46,8 @@
             </div>
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-white text-sm font-bold">Analityka (Google)</p>
-                    <p class="text-xs text-slate-500">Google Tag & Analytics.</p>
+                    <p class="text-white text-sm font-bold" data-i18n="cookie.analytics">Analityka (Google)</p>
+                    <p class="text-xs text-slate-500" data-i18n="cookie.analytics_desc">Google Tag & Analytics.</p>
                 </div>
                 <label class="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" id="consent-analytics" checked class="sr-only peer">
@@ -58,8 +58,8 @@
             </div>
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-white text-sm font-bold">Marketing (Meta)</p>
-                    <p class="text-xs text-slate-500">Meta Pixel & Facebook Ads.</p>
+                    <p class="text-white text-sm font-bold" data-i18n="cookie.marketing">Marketing (Meta)</p>
+                    <p class="text-xs text-slate-500" data-i18n="cookie.marketing_desc">Meta Pixel & Facebook Ads.</p>
                 </div>
                 <label class="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" id="consent-marketing" checked class="sr-only peer">
@@ -68,7 +68,7 @@
                     </div>
                 </label>
             </div>
-            <button id="save-cookie-settings"
+            <button id="save-cookie-settings" data-i18n="cookie.save"
                 class="w-full bg-white/10 text-white font-bold py-3 rounded-xl hover:bg-white/20 transition-all text-sm">
                 Zapisz wybrane
             </button>

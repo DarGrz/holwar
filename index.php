@@ -57,20 +57,25 @@
                         width="504" height="152" loading="eager">
                 </a>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#services">Usługi</a>
-                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#how-it-works">Jak to
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#services" data-i18n="nav.services">Usługi</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#how-it-works" data-i18n="nav.how_it_works">Jak to
                         działa</a>
-                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#faq">FAQ</a>
-                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#reviews">Opinie</a>
-                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#about">O nas</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#faq" data-i18n="nav.faq">FAQ</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#reviews" data-i18n="nav.reviews">Opinie</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#about" data-i18n="nav.about">O nas</a>
                 </nav>
                 <div class="flex items-center gap-2 sm:gap-4">
+                    <!-- Language Switcher -->
+                    <div class="lang-switch inline-flex items-center p-0.5 rounded-xl bg-white/5 border border-slate-200 dark:border-white/10 text-xs font-bold" role="group" aria-label="Wybór języka / Language selection">
+                        <button type="button" onclick="setLanguage('pl')" data-lang-btn="pl" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-primary text-background-dark shadow-sm">PL</button>
+                        <button type="button" onclick="setLanguage('en')" data-lang-btn="en" class="px-2.5 py-1 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-white">EN</button>
+                    </div>
                     <a href="tel:+48793960058"
                         class="bg-primary text-background-dark px-3 sm:px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 hover:scale-105 transition-transform active:scale-95 shadow-lg shadow-primary/20 flex-shrink-0">
                         <span class="material-symbols-outlined text-[18px]">call</span>
                         <span>793 960 058</span>
                     </a>
-                    <button id="mobile-menu-open" type="button" aria-label="Otwórz menu"
+                    <button id="mobile-menu-open" type="button" aria-label="Otwórz menu" data-i18n-attr="aria-label:nav.menu_open"
                         class="md:hidden flex items-center justify-center text-slate-900 dark:text-white shrink-0">
                         <span class="material-symbols-outlined text-3xl">menu</span>
                     </button>
@@ -86,8 +91,8 @@
         <section class="py-24 bg-slate-100 dark:bg-white/[0.02]" id="services">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl lg:text-5xl font-800 mb-4 italic uppercase">NASZE USŁUGI</h2>
-                    <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Niezależnie od problemu, mamy sprzęt
+                    <h2 class="text-3xl lg:text-5xl font-800 mb-4 italic uppercase" data-i18n="services.title">NASZE USŁUGI</h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto" data-i18n="services.subtitle">Niezależnie od problemu, mamy sprzęt
                         i zespół gotowy do pomocy dokładnie tam, gdzie nas potrzebujesz.</p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -97,8 +102,8 @@
                             class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <span class="material-symbols-outlined text-3xl">auto_towing</span>
                         </div>
-                        <h3 class="text-xl font-800 mb-3">Holowanie 24/7</h3>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Holowanie lokalne i na
+                        <h3 class="text-xl font-800 mb-3" data-i18n="services.towing_title">Holowanie 24/7</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="services.towing_desc">Holowanie lokalne i na
                             długich dystansach samochodów osobowych, motocykli i busów przy użyciu bezpiecznych platform
                             hydraulicznych.</p>
                     </div>
@@ -108,12 +113,12 @@
                             class="w-14 h-14 rounded-xl bg-accent-blue/10 text-accent-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <span class="material-symbols-outlined text-3xl">tire_repair</span>
                         </div>
-                        <h3 class="text-xl font-800 mb-3">Wymiana Koła &amp; Wulkanizacja</h3>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Przebita opona? Wymienimy
+                        <h3 class="text-xl font-800 mb-3" data-i18n="services.tires_title">Wymiana Koła &amp; Wulkanizacja</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4" data-i18n="services.tires_desc">Przebita opona? Wymienimy
                             ją na Twoje koło zapasowe lub pomożemy z mobilną wulkanizacją na miejscu, również dla aut TIR i BUS.
                         </p>
                         <a href="wulkanizacja-mobilna.php" class="text-xs font-bold text-accent-blue inline-flex items-center gap-1 hover:underline">
-                            Mobilna wulkanizacja TIR &amp; BUS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            <span data-i18n="services.tires_link">Mobilna wulkanizacja TIR &amp; BUS</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                     <div
@@ -122,8 +127,8 @@
                             class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <span class="material-symbols-outlined text-3xl">battery_charging_full</span>
                         </div>
-                        <h3 class="text-xl font-800 mb-3">Odpalanie Auta</h3>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Rozładowany akumulator w
+                        <h3 class="text-xl font-800 mb-3" data-i18n="services.jump_title">Odpalanie Auta</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="services.jump_desc">Rozładowany akumulator w
                             zimie? Nasze mocne boostery działają ze wszystkimi silnikami, w tym dieslami o dużej
                             pojemności.</p>
                     </div>
@@ -133,8 +138,8 @@
                             class="w-14 h-14 rounded-xl bg-accent-blue/10 text-accent-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <span class="material-symbols-outlined text-3xl">local_gas_station</span>
                         </div>
-                        <h3 class="text-xl font-800 mb-3">Dowóz Paliwa</h3>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Zabrakło benzyny lub ropy?
+                        <h3 class="text-xl font-800 mb-3" data-i18n="services.fuel_title">Dowóz Paliwa</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="services.fuel_desc">Zabrakło benzyny lub ropy?
                             Dowieziemy paliwo, które pozwoli Ci bezpiecznie dojechać do najbliższej stacji.</p>
                     </div>
                 </div>
@@ -147,7 +152,7 @@
                     <div class="absolute inset-0 lg:left-1/2 opacity-20 pointer-events-none grayscale brightness-50 bg-center bg-cover"
                         style='background-image: url("img/image_2.jpg");'></div>
                     <div class="relative z-10 lg:w-2/3">
-                        <h2 class="text-4xl lg:text-6xl font-800 mb-12 italic uppercase leading-tight">POMOC W 3 <br />
+                        <h2 class="text-4xl lg:text-6xl font-800 mb-12 italic uppercase leading-tight" data-i18n="hiw.title">POMOC W 3 <br />
                             PROSTYCH KROKACH</h2>
                         <div class="space-y-12">
                             <div class="flex gap-6 items-start">
@@ -155,8 +160,8 @@
                                     class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-primary text-primary flex items-center justify-center font-800 text-xl">
                                     1</div>
                                 <div>
-                                    <h4 class="text-2xl font-bold mb-2">Zadzwoń do dyspozytora</h4>
-                                    <p class="text-slate-400">Zadzwoń pod numer <a href="tel:+48793960058"
+                                    <h4 class="text-2xl font-bold mb-2" data-i18n="hiw.step1_title">Zadzwoń do dyspozytora</h4>
+                                    <p class="text-slate-400" data-i18n="hiw.step1_desc">Zadzwoń pod numer <a href="tel:+48793960058"
                                             class="text-primary font-bold hover:underline">+48 793 960 058</a>. Jesteśmy
                                         dostępni 24/7.
                                         Podaj swoją lokalizację i model pojazdu.</p>
@@ -167,8 +172,8 @@
                                     class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-primary text-primary flex items-center justify-center font-800 text-xl">
                                     2</div>
                                 <div>
-                                    <h4 class="text-2xl font-bold mb-2">Poczekaj chwilę</h4>
-                                    <p class="text-slate-400">Najbliższa jednostka zostaje natychmiast wysłana.
+                                    <h4 class="text-2xl font-bold mb-2" data-i18n="hiw.step2_title">Poczekaj chwilę</h4>
+                                    <p class="text-slate-400" data-i18n="hiw.step2_desc">Najbliższa jednostka zostaje natychmiast wysłana.
                                         Otrzymasz link GPS, aby śledzić nasz dojazd na żywo w telefonie.</p>
                                 </div>
                             </div>
@@ -177,14 +182,14 @@
                                     class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-primary text-primary flex items-center justify-center font-800 text-xl">
                                     3</div>
                                 <div>
-                                    <h4 class="text-2xl font-bold mb-2">Problem rozwiązany</h4>
-                                    <p class="text-slate-400">Naprawimy auto na miejscu lub odholujemy do zaufanego
+                                    <h4 class="text-2xl font-bold mb-2" data-i18n="hiw.step3_title">Problem rozwiązany</h4>
+                                    <p class="text-slate-400" data-i18n="hiw.step3_desc">Naprawimy auto na miejscu lub odholujemy do zaufanego
                                         warsztatu. Zapłacisz kartą, gotówką lub bezgotówkowo z ubezpieczenia.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-16">
-                            <a href="tel:+48793960058"
+                            <a href="tel:+48793960058" data-i18n="hiw.save_number"
                                 class="bg-primary text-background-dark px-10 py-5 rounded-xl font-800 text-xl hover:scale-105 transition-transform inline-block">
                                 Zapisz nasz numer
                             </a>
@@ -198,19 +203,19 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                     <div class="text-center">
                         <p class="text-4xl lg:text-6xl font-800 text-primary mb-2">12k+</p>
-                        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs">Uratowanych Aut</p>
+                        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs" data-i18n="stats.rescued">Uratowanych Aut</p>
                     </div>
                     <div class="text-center">
                         <p class="text-4xl lg:text-6xl font-800 text-primary mb-2">20min</p>
-                        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs">Średni Dojazd</p>
+                        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs" data-i18n="stats.arrival">Średni Dojazd</p>
                     </div>
                     <div class="text-center">
                         <p class="text-4xl lg:text-6xl font-800 text-primary mb-2">4.9/5</p>
-                        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs">Ocena Google</p>
+                        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs" data-i18n="stats.rating">Ocena Google</p>
                     </div>
                     <div class="text-center">
                         <p class="text-4xl lg:text-6xl font-800 text-primary mb-2">24/7</p>
-                        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs">Dostępność</p>
+                        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs" data-i18n="stats.avail">Dostępność</p>
                     </div>
                 </div>
             </div>
@@ -219,8 +224,8 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div>
-                        <h2 class="text-3xl lg:text-5xl font-800 mb-4 italic uppercase">Co mówią kierowcy</h2>
-                        <p class="text-slate-600 dark:text-slate-400">Zaufały nam tysiące kierowców z Warszawy i okolic.
+                        <h2 class="text-3xl lg:text-5xl font-800 mb-4 italic uppercase" data-i18n="reviews.title">Co mówią kierowcy</h2>
+                        <p class="text-slate-600 dark:text-slate-400" data-i18n="reviews.subtitle">Zaufały nam tysiące kierowców z Warszawy i okolic.
                         </p>
                     </div>
                     <div class="flex gap-4">
@@ -244,15 +249,15 @@
                             <span class="material-symbols-outlined fill-1">star</span>
                             <span class="material-symbols-outlined fill-1">star</span>
                         </div>
-                        <p class="text-slate-700 dark:text-slate-300 italic mb-6 leading-relaxed">
+                        <p class="text-slate-700 dark:text-slate-300 italic mb-6 leading-relaxed" data-i18n="reviews.r1_text">
                             "Utknąłem w centrum o 3 rano. Pomoc przyjechała w 15 minut! Kierowca był super
                             profesjonalny i miły. Bardzo polecam!"
                         </p>
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 rounded-full bg-slate-300"></div>
                             <div>
-                                <p class="font-bold text-sm">Marek W.</p>
-                                <p class="text-xs text-slate-500">Warszawa, Śródmieście</p>
+                                <p class="font-bold text-sm" data-i18n="reviews.r1_author">Marek W.</p>
+                                <p class="text-xs text-slate-500" data-i18n="reviews.r1_loc">Warszawa, Śródmieście</p>
                             </div>
                         </div>
                     </div>
@@ -265,15 +270,15 @@
                             <span class="material-symbols-outlined fill-1">star</span>
                             <span class="material-symbols-outlined fill-1">star</span>
                         </div>
-                        <p class="text-slate-700 dark:text-slate-300 italic mb-6 leading-relaxed">
+                        <p class="text-slate-700 dark:text-slate-300 italic mb-6 leading-relaxed" data-i18n="reviews.r2_text">
                             "Świetna obsługa przy wymianie koła na S8. Szybka reakcja i bardzo rozsądne ceny. Najlepsza
                             pomoc drogowa w mieście."
                         </p>
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 rounded-full bg-slate-300"></div>
                             <div>
-                                <p class="font-bold text-sm">Anna K.</p>
-                                <p class="text-xs text-slate-500">Warszawa, Bemowo</p>
+                                <p class="font-bold text-sm" data-i18n="reviews.r2_author">Anna K.</p>
+                                <p class="text-xs text-slate-500" data-i18n="reviews.r2_loc">Warszawa, Bemowo</p>
                             </div>
                         </div>
                     </div>
@@ -286,15 +291,15 @@
                             <span class="material-symbols-outlined fill-1">star</span>
                             <span class="material-symbols-outlined fill-1">star</span>
                         </div>
-                        <p class="text-slate-700 dark:text-slate-300 italic mb-6 leading-relaxed">
+                        <p class="text-slate-700 dark:text-slate-300 italic mb-6 leading-relaxed" data-i18n="reviews.r3_text">
                             "Korzystałem z odpalania auta w mroźny poranek. Uratowali mi dzień, dzięki nim nawet nie
                             spóźniłem się do pracy. 5 gwiazdek!"
                         </p>
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 rounded-full bg-slate-300"></div>
                             <div>
-                                <p class="font-bold text-sm">Tomasz R.</p>
-                                <p class="text-xs text-slate-500">Warszawa, Ursynów</p>
+                                <p class="font-bold text-sm" data-i18n="reviews.r3_author">Tomasz R.</p>
+                                <p class="text-xs text-slate-500" data-i18n="reviews.r3_loc">Warszawa, Ursynów</p>
                             </div>
                         </div>
                     </div>
@@ -305,8 +310,8 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 class="text-3xl lg:text-5xl font-800 mb-8 italic uppercase">W WARSZAWIE I OKOLICY</h2>
-                        <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">Obsługujemy całą Warszawę oraz
+                        <h2 class="text-3xl lg:text-5xl font-800 mb-8 italic uppercase" data-i18n="coverage.title">W WARSZAWIE I OKOLICY</h2>
+                        <p class="text-lg text-slate-600 dark:text-slate-400 mb-8" data-i18n="coverage.desc">Obsługujemy całą Warszawę oraz
                             miejscowości wzdłuż tras wylotowych. Jesteśmy do Twojej dyspozycji 24/7, zapewniając szybki
                             dojazd tam, gdzie nas potrzebujesz.</p>
                         <div class="grid grid-cols-2 gap-4">
@@ -368,11 +373,11 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-2 gap-16">
                     <div>
-                        <h2 class="text-3xl lg:text-5xl font-800 mb-8 italic uppercase leading-tight">Profesjonalna
+                        <h2 class="text-3xl lg:text-5xl font-800 mb-8 italic uppercase leading-tight" data-i18n="seo.heading">Profesjonalna
                             Pomoc
                             Drogowa Warszawa</h2>
                         <div class="prose prose-slate dark:prose-invert max-w-none">
-                            <p class="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                            <p class="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed" data-i18n="seo.p1">
                                 Każdy kierowca może napotkać nagłe problemy na drodze – awaria samochodu, kolizja czy
                                 inne
                                 nieprzewidziane sytuacje. W takich momentach niezawodna <strong>pomoc drogowa
@@ -381,27 +386,27 @@
                                     Warszawa</strong>, zapewniając bezpieczne przewiezienie auta do wyznaczonego
                                 miejsca.
                             </p>
-                            <h3 class="text-xl font-bold mb-4 text-primary uppercase tracking-wider">Dlaczego warto
+                            <h3 class="text-xl font-bold mb-4 text-primary uppercase tracking-wider" data-i18n="seo.why_title">Dlaczego warto
                                 wybrać HOLWAR?</h3>
                             <ul class="space-y-4 mb-8">
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary">verified</span>
-                                    <span><strong>Całodobowa obsługa</strong> – oferujemy pomoc drogową w Warszawie 24
+                                    <span data-i18n="seo.why_1"><strong>Całodobowa obsługa</strong> – oferujemy pomoc drogową w Warszawie 24
                                         godziny na dobę, 7 dni w tygodniu.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary">verified</span>
-                                    <span><strong>Błyskawiczny czas reakcji</strong> – nasza laweta Warszawa dociera na
+                                    <span data-i18n="seo.why_2"><strong>Błyskawiczny czas reakcji</strong> – nasza laweta Warszawa dociera na
                                         miejsce zdarzenia tak szybko, jak to możliwe.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary">verified</span>
-                                    <span><strong>Bezpieczne holowanie</strong> – nasze usługi realizowane są przez
+                                    <span data-i18n="seo.why_3"><strong>Bezpieczne holowanie</strong> – nasze usługi realizowane są przez
                                         doświadczonych specjalistów.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary">verified</span>
-                                    <span><strong>Nowoczesny sprzęt</strong> – dysponujemy flotą pojazdów klasy premium,
+                                    <span data-i18n="seo.why_4"><strong>Nowoczesny sprzęt</strong> – dysponujemy flotą pojazdów klasy premium,
                                         co
                                         pozwala nam obsługiwać auta osobowe, dostawcze i luksusowe.</span>
                                 </li>
@@ -411,28 +416,28 @@
                     <div class="space-y-8">
                         <div
                             class="bg-white dark:bg-card-dark p-8 rounded-3xl border border-slate-200 dark:border-white/5 shadow-xl">
-                            <h3 class="text-2xl font-800 mb-4 italic uppercase">Holowanie Warszawa - Szybko i
+                            <h3 class="text-2xl font-800 mb-4 italic uppercase" data-i18n="seo.card_title">Holowanie Warszawa - Szybko i
                                 Bezpiecznie</h3>
-                            <p class="text-slate-600 dark:text-slate-400 mb-6">
+                            <p class="text-slate-600 dark:text-slate-400 mb-6" data-i18n="seo.card_desc">
                                 Awaria pojazdu? Potrzebujesz transportu samochodu po kolizji? Nasza usługa holowania
                                 Warszawa jest dostępna całodobowo. Oferujemy transport do warsztatu, pod dom lub w
                                 dowolne
                                 wskazane miejsce na terenie miasta i okolic.
                             </p>
                             <div class="grid grid-cols-2 gap-4">
-                                <div
+                                <div data-i18n="seo.veh_cars"
                                     class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
                                     Auta Osobowe
                                 </div>
-                                <div
+                                <div data-i18n="seo.veh_vans"
                                     class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
                                     Dostawcze i Busy
                                 </div>
-                                <div
+                                <div data-i18n="seo.veh_moto"
                                     class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
                                     Motocykle i Quady
                                 </div>
-                                <div
+                                <div data-i18n="seo.veh_mach"
                                     class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
                                     Maszyny Rolnicze
                                 </div>
@@ -440,8 +445,8 @@
                         </div>
 
                         <div class="bg-primary text-background-dark p-8 rounded-3xl shadow-xl shadow-primary/20">
-                            <h3 class="text-2xl font-800 mb-4 italic uppercase">Zawsze Gotowi do Działania</h3>
-                            <p class="font-bold mb-6">Bez względu na porę dnia czy nocy, pomoc drogowa HOLWAR to Twój
+                            <h3 class="text-2xl font-800 mb-4 italic uppercase" data-i18n="seo.cta_title">Zawsze Gotowi do Działania</h3>
+                            <p class="font-bold mb-6" data-i18n="seo.cta_desc">Bez względu na porę dnia czy nocy, pomoc drogowa HOLWAR to Twój
                                 zaufany partner na stołecznych drogach.</p>
                             <a href="tel:+48793960058"
                                 class="inline-flex items-center gap-2 bg-background-dark text-white px-6 py-3 rounded-xl font-800 transition-transform hover:scale-105">
@@ -457,9 +462,9 @@
         <section class="py-24" id="faq">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl lg:text-5xl font-800 mb-4 italic uppercase">Najczęściej Zadawane Pytania (FAQ)
+                    <h2 data-i18n="faq.title" class="text-3xl lg:text-5xl font-800 mb-4 italic uppercase">Najczęściej Zadawane Pytania (FAQ)
                     </h2>
-                    <p class="text-slate-600 dark:text-slate-400 uppercase tracking-widest font-bold text-xs">Wszystko,
+                    <p data-i18n="faq.subtitle" class="text-slate-600 dark:text-slate-400 uppercase tracking-widest font-bold text-xs">Wszystko,
                         co musisz wiedzieć o naszej pomocy drogowej</p>
                 </div>
 
@@ -468,12 +473,12 @@
                     <div class="faq-item group">
                         <button
                             class="faq-trigger w-full text-left p-6 sm:p-8 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200 dark:border-white/10 flex items-center justify-between transition-all hover:bg-white dark:hover:bg-white/10">
-                            <span class="text-lg font-800 pr-8">Holowanie Warszawa – jak szybko dojeżdżacie na
+                            <span data-i18n="faq.q1" class="text-lg font-800 pr-8">Holowanie Warszawa – jak szybko dojeżdżacie na
                                 miejsce?</span>
                             <span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
                         </button>
                         <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
-                            <div
+                            <div data-i18n="faq.a1"
                                 class="p-8 text-slate-600 dark:text-slate-400 leading-relaxed border-x border-b border-slate-200 dark:border-white/10 rounded-b-2xl -mt-4 pt-12">
                                 W większości przypadków nasza laweta dociera na miejsce w ciągu 20–30 minut od
                                 zgłoszenia. Oferujemy błyskawiczne holowanie w Warszawie 24/7, niezależnie od pory dnia
@@ -486,12 +491,12 @@
                     <div class="faq-item group">
                         <button
                             class="faq-trigger w-full text-left p-6 sm:p-8 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200 dark:border-white/10 flex items-center justify-between transition-all hover:bg-white dark:hover:bg-white/10">
-                            <span class="text-lg font-800 pr-8">Czy Wasza pomoc drogowa w Warszawie jest
+                            <span data-i18n="faq.q2" class="text-lg font-800 pr-8">Czy Wasza pomoc drogowa w Warszawie jest
                                 całodobowa?</span>
                             <span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
                         </button>
                         <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
-                            <div
+                            <div data-i18n="faq.a2"
                                 class="p-8 text-slate-600 dark:text-slate-400 leading-relaxed border-x border-b border-slate-200 dark:border-white/10 rounded-b-2xl -mt-4 pt-12">
                                 Tak, HOLWAR operuje w trybie 24/7. Jesteśmy do dyspozycji kierowców 365 dni w roku,
                                 wliczając w to niedziele oraz wszystkie dni ustawowo wolne od pracy i święta.
@@ -503,12 +508,12 @@
                     <div class="faq-item group">
                         <button
                             class="faq-trigger w-full text-left p-6 sm:p-8 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200 dark:border-white/10 flex items-center justify-between transition-all hover:bg-white dark:hover:bg-white/10">
-                            <span class="text-lg font-800 pr-8">Kiedy warto skorzystać z usługi lawety zamiast holowania
+                            <span data-i18n="faq.q3" class="text-lg font-800 pr-8">Kiedy warto skorzystać z usługi lawety zamiast holowania
                                 na lince?</span>
                             <span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
                         </button>
                         <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
-                            <div
+                            <div data-i18n="faq.a3"
                                 class="p-8 text-slate-600 dark:text-slate-400 leading-relaxed border-x border-b border-slate-200 dark:border-white/10 rounded-b-2xl -mt-4 pt-12">
                                 Transport lawetą jest wymagany w przypadku aut z automatyczną skrzynią biegów, napędem
                                 4x4, uszkodzonym układem kierowniczym lub zawieszeniem. Jest to również
@@ -522,12 +527,12 @@
                     <div class="faq-item group">
                         <button
                             class="faq-trigger w-full text-left p-6 sm:p-8 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200 dark:border-white/10 flex items-center justify-between transition-all hover:bg-white dark:hover:bg-white/10">
-                            <span class="text-lg font-800 pr-8">Jakie lokalizacje obsługujecie poza samą
+                            <span data-i18n="faq.q4" class="text-lg font-800 pr-8">Jakie lokalizacje obsługujecie poza samą
                                 Warszawą?</span>
                             <span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
                         </button>
                         <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
-                            <div
+                            <div data-i18n="faq.a4"
                                 class="p-8 text-slate-600 dark:text-slate-400 leading-relaxed border-x border-b border-slate-200 dark:border-white/10 rounded-b-2xl -mt-4 pt-12">
                                 Obsługujemy całą aglomerację warszawską oraz trasy wylotowe. Regularnie pomagamy
                                 kierowcom w miejscowościach takich jak: Otwock, Garwolin, Ryki, Mińsk Mazowiecki,
@@ -540,12 +545,12 @@
                     <div class="faq-item group">
                         <button
                             class="faq-trigger w-full text-left p-6 sm:p-8 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200 dark:border-white/10 flex items-center justify-between transition-all hover:bg-white dark:hover:bg-white/10">
-                            <span class="text-lg font-800 pr-8">Czy oferujecie pomoc dla aut na zagranicznych numerach
+                            <span data-i18n="faq.q5" class="text-lg font-800 pr-8">Czy oferujecie pomoc dla aut na zagranicznych numerach
                                 rejestracyjnych?</span>
                             <span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
                         </button>
                         <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
-                            <div
+                            <div data-i18n="faq.a5"
                                 class="p-8 text-slate-600 dark:text-slate-400 leading-relaxed border-x border-b border-slate-200 dark:border-white/10 rounded-b-2xl -mt-4 pt-12">
                                 Oczywiście. Pomagamy wszystkim kierowcom, niezależnie od kraju rejestracji pojazdu.
                                 Obsługujemy obcokrajowców przejeżdżających przez Polskę, oferując profesjonalny
@@ -558,12 +563,12 @@
                     <div class="faq-item group">
                         <button
                             class="faq-trigger w-full text-left p-6 sm:p-8 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200 dark:border-white/10 flex items-center justify-between transition-all hover:bg-white dark:hover:bg-white/10">
-                            <span class="text-lg font-800 pr-8">Jakie pojazdy możecie przewieźć na Waszej
+                            <span data-i18n="faq.q6" class="text-lg font-800 pr-8">Jakie pojazdy możecie przewieźć na Waszej
                                 lawecie?</span>
                             <span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
                         </button>
                         <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
-                            <div
+                            <div data-i18n="faq.a6"
                                 class="p-8 text-slate-600 dark:text-slate-400 leading-relaxed border-x border-b border-slate-200 dark:border-white/10 rounded-b-2xl -mt-4 pt-12">
                                 Nasza flota jest przystosowana do transportu szerokiej gamy pojazdów: od motocykli i
                                 quadów, przez samochody osobowe i luksusowe (niski kąt wjazdu), aż po ciężkie auta
@@ -576,12 +581,12 @@
                     <div class="faq-item group">
                         <button
                             class="faq-trigger w-full text-left p-6 sm:p-8 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200 dark:border-white/10 flex items-center justify-between transition-all hover:bg-white dark:hover:bg-white/10">
-                            <span class="text-lg font-800 pr-8">Jakie informacje przygotować przy zgłoszeniu potrzeby
+                            <span data-i18n="faq.q7" class="text-lg font-800 pr-8">Jakie informacje przygotować przy zgłoszeniu potrzeby
                                 pomocy?</span>
                             <span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
                         </button>
                         <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
-                            <div
+                            <div data-i18n="faq.a7"
                                 class="p-8 text-slate-600 dark:text-slate-400 leading-relaxed border-x border-b border-slate-200 dark:border-white/10 rounded-b-2xl -mt-4 pt-12">
                                 Przy kontakcie z dyspozytorem podaj: dokładną lokalizację (lub charakterystyczne
                                 punkty), markę i model pojazdu, rodzaj usterki/zdarzenia (np. urwane koło, błąd silnika)

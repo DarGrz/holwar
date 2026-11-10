@@ -192,23 +192,27 @@
                 </a>
                 <nav class="hidden md:flex items-center gap-8">
                     <a class="text-sm font-semibold hover:text-primary transition-colors"
-                        href="index.php#services">Usługi</a>
+                        href="index.php#services" data-i18n="nav.services">Usługi</a>
                     <a class="text-sm font-semibold hover:text-primary transition-colors"
-                        href="pomoc-drogowa-tir.php">Serwis TIR</a>
+                        href="pomoc-drogowa-tir.php" data-i18n="nav.tir">Serwis TIR</a>
                     <a class="text-sm font-semibold hover:text-primary transition-colors"
-                        href="autokasacja.php">Autokasacja</a>
+                        href="autokasacja.php" data-i18n="nav.autokasacja">Autokasacja</a>
                     <a class="text-sm font-semibold hover:text-primary transition-colors"
-                        href="oferta.php">Oferta</a>
+                        href="oferta.php" data-i18n="nav.oferta">Oferta</a>
                     <a class="text-sm font-semibold hover:text-primary transition-colors"
-                        href="index.php#reviews">Opinie</a>
+                        href="index.php#reviews" data-i18n="nav.reviews">Opinie</a>
                 </nav>
                 <div class="flex items-center gap-2 sm:gap-4">
+                    <div class="lang-switch inline-flex items-center p-0.5 rounded-xl bg-white/5 border border-slate-200 dark:border-white/10 text-xs font-bold" role="group" aria-label="Wybór języka / Language selection">
+                        <button type="button" onclick="setLanguage('pl')" data-lang-btn="pl" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-primary text-background-dark shadow-sm">PL</button>
+                        <button type="button" onclick="setLanguage('en')" data-lang-btn="en" class="px-2.5 py-1 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-white">EN</button>
+                    </div>
                     <a href="tel:+48793960058"
                         class="bg-primary text-background-dark px-3 sm:px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 hover:scale-105 transition-transform active:scale-95 shadow-lg shadow-primary/20 flex-shrink-0">
                         <span class="material-symbols-outlined text-[18px]">call</span>
                         <span>793 960 058</span>
                     </a>
-                    <button id="mobile-menu-open" type="button" aria-label="Otwórz menu"
+                    <button id="mobile-menu-open" type="button" aria-label="Otwórz menu" data-i18n-attr="aria-label:nav.menu_open"
                         class="md:hidden flex items-center justify-center text-slate-900 dark:text-white shrink-0">
                         <span class="material-symbols-outlined text-3xl">menu</span>
                     </button>
