@@ -1,10 +1,10 @@
 <?php
 session_start();
 // Konfiguracja bazy danych
-$host = 'localhost'; // Zazwyczaj localhost na większości hostingów
-$db_name = 'serwer217040_holpol';
-$username = 'serwer217040_holpol';
-$password = 'Holpol123#@!';
+$host = 'localhost';
+$db_name = 'twoja_baza_danych';
+$username = 'twoj_uzytkownik';
+$password = 'twoje_haslo';
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$db_name;charset=utf8", $username, $password);

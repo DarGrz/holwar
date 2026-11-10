@@ -1,0 +1,36 @@
+# Pliki konfiguracyjne i wrażliwe dane dostępowe
+config.php
+config_gtag.json
+.env
+.env.*
+*.pem
+*.key
+*.cert
+
+# Zrzuty baz danych i pliki bazodanowe
+*.sql
+*.sql.gz
+*.sqlite
+*.db
+
+# Logi
+*.log
+error_log
+
+# Pliki systemowe i edytorów
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Kopie zapasowe i pliki tymczasowe
+*copy*.php
+*.bak
+*.old
+*.tmp
+
+# Node.js
+node_modules/
+npm-debug.log*
