@@ -1,0 +1,7 @@
+# -----------------------------------------------
+# Blokowanie adresów IP
+# -----------------------------------------------
+<RequireAll>
+    Require all granted
+    Require not ip 93.159.60.40
+</RequireAll>
