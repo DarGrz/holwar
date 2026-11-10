@@ -28,3 +28,4 @@ if (file_exists($gtag_config_file)) {
 // Automatyczne śledzenie wizyt
 include 'tracker.php';
 ?>
+
