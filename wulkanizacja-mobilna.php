@@ -203,7 +203,7 @@
                         href="oferta.php" data-i18n="nav.oferta">Oferta</a>
                 </nav>
                 <div class="flex items-center gap-2 sm:gap-4">
-                    <div class="lang-switch inline-flex items-center p-0.5 rounded-xl bg-white/5 border border-slate-200 dark:border-white/10 text-xs font-bold" role="group" aria-label="Wybór języka / Language selection">
+                    <div class="lang-switch hidden md:inline-flex items-center p-0.5 rounded-xl bg-white/5 border border-slate-200 dark:border-white/10 text-xs font-bold" role="group" aria-label="Wybór języka / Language selection">
                         <button type="button" onclick="setLanguage('pl')" data-lang-btn="pl" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-primary text-background-dark shadow-sm">PL</button>
                         <button type="button" onclick="setLanguage('en')" data-lang-btn="en" class="px-2.5 py-1 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-white">EN</button>
                     </div>
