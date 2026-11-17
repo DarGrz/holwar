@@ -72,11 +72,22 @@
     text-transform: uppercase;
 }
 
-.holwar-hero__availability > span {
+.holwar-hero__dot,
+.holwar-hero__availability > span:first-child {
+    display: inline-block;
     width: 7px;
     height: 7px;
     border-radius: 50%;
     background: currentColor;
+    flex-shrink: 0;
+}
+
+.holwar-hero__availability > span:not(:first-child) {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    display: inline;
 }
 
 .holwar-hero h1 {
