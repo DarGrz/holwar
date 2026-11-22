@@ -40,7 +40,7 @@
                 <h5 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary" data-i18n="footer.company_col">Firma</h5>
                 <ul class="space-y-4 text-sm text-slate-400">
                     <li><a class="hover:text-white transition-colors" href="index.php#about" data-i18n="nav.about">O nas</a></li>
-                    <li><a class="hover:text-white transition-colors" href="lokalizacje.php">Obszar działania (236 miejscowości)</a></li>
+                    <li><a class="hover:text-white transition-colors" href="lokalizacje.php">Obszar działania (188 miejscowości)</a></li>
                     <li><a class="hover:text-white transition-colors" href="#" data-i18n="footer.partner_program">Program Partnerski</a></li>
                     <li><a class="hover:text-white transition-colors" href="oferta.php" data-i18n="nav.oferta">Oferta</a></li>
                     <li><a class="hover:text-white transition-colors" href="polityka-prywatnosci.php" data-i18n="footer.privacy_policy">Polityka
@@ -72,10 +72,10 @@
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
                 <div>
                     <h6 class="text-xs font-bold uppercase tracking-widest text-primary" data-i18n="footer.area_heading">Obszar działania - Pomoc Drogowa i Laweta</h6>
-                    <p class="text-xs text-slate-400 mt-1">Szybki dojazd 15–20 minut • Warszawa, trasy wylotowe S17, S8, A2, DK50 oraz 236 miejscowości</p>
+                    <p class="text-xs text-slate-400 mt-1">Szybki dojazd 15–20 minut • Warszawa, trasy wylotowe S17, S8, A2, DK50 oraz 188 miejscowości</p>
                 </div>
                 <a href="lokalizacje.php" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/10 border border-primary/30 text-primary hover:bg-primary hover:text-background-dark text-xs font-bold uppercase tracking-wider transition-all shrink-0">
-                    <span>Wszystkie Miejscowości (236)</span>
+                    <span>Wszystkie Miejscowości (188)</span>
                     <span class="material-symbols-outlined text-xs">arrow_forward</span>
                 </a>
             </div>

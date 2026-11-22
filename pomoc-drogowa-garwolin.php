@@ -402,7 +402,7 @@
                         <p class="text-xs sm:text-sm text-slate-500">Ekspresowy dojazd lawety na trasie S17 oraz w sąsiednich miastach i gminach:</p>
                     </div>
                     <a href="lokalizacje.php" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/10 border border-primary/30 text-primary hover:bg-primary hover:text-background-dark text-xs font-bold uppercase tracking-wider transition-all shrink-0">
-                        <span>Wszystkie Lokalizacje (236)</span>
+                        <span>Wszystkie Lokalizacje (188)</span>
                         <span class="material-symbols-outlined text-xs">arrow_forward</span>
                     </a>
                 </div>

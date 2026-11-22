@@ -46,7 +46,7 @@
             </a>
             <a class="mobile-nav-link text-lg font-bold text-slate-300 hover:text-primary transition-colors flex items-center gap-4 py-2"
                 href="lokalizacje.php">
-                <span class="material-symbols-outlined text-primary">location_city</span> <span>Obszar Działania (236)</span>
+                <span class="material-symbols-outlined text-primary">location_city</span> <span>Obszar Działania (188)</span>
             </a>
             <a class="mobile-nav-link text-lg font-bold text-slate-300 hover:text-primary transition-colors flex items-center gap-4 py-2"
                 href="autokasacja.php">

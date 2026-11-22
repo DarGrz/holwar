@@ -598,7 +598,7 @@ function render_location_page($location, $slug)
                             <p class="text-xs sm:text-sm text-slate-500">Sprawdź naszą ofertę lawety, holowania oraz mobilnego serwisu TIR i BUS w sąsiednich rejonach:</p>
                         </div>
                         <a href="lokalizacje.php" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/10 border border-primary/30 text-primary hover:bg-primary hover:text-background-dark text-xs font-bold uppercase tracking-wider transition-all shrink-0">
-                            <span>Wszystkie Lokalizacje (236)</span>
+                            <span>Wszystkie Lokalizacje (188)</span>
                             <span class="material-symbols-outlined text-xs">arrow_forward</span>
                         </a>
                     </div>

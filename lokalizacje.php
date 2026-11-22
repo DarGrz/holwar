@@ -33,7 +33,7 @@
     <?php require_once __DIR__ . '/hero.php'; render_holwar_hero_head(); ?>
     <title>Obszar Działania | Pomoc Drogowa i Laweta 24H | Wszystkie Miejscowości | HOLWAR</title>
     <meta name="description"
-        content="Pełna lista 236 miast i miejscowości obsługiwanych przez pomoc drogową HOLWAR 24H. Szybki dojazd lawetą w 15–20 min, holowanie, mobilny serwis TIR i BUS. Zadzwoń: 793 960 058!" />
+        content="Pełna lista 188 miast i miejscowości obsługiwanych przez pomoc drogową HOLWAR 24H. Szybki dojazd lawetą w 15–20 min, holowanie, mobilny serwis TIR i BUS. Zadzwoń: 793 960 058!" />
     <meta name="keywords"
         content="pomoc drogowa obszar działania, laweta warszawa miejscowości, holowanie s17 s8 a2, mobilny serwis tir mazowieckie, lista miast pomoc drogowa" />
     <link rel="canonical" href="https://www.holwar.pl/lokalizacje.php" />
@@ -41,7 +41,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Obszar Działania | Pomoc Drogowa i Laweta 24H | HOLWAR" />
     <meta property="og:description"
-        content="Całodobowa pomoc drogowa, holowanie i laweta na terenie 236 miast i miejscowości. Szybki dojazd w 15–20 minut." />
+        content="Całodobowa pomoc drogowa, holowanie i laweta na terenie 188 miast i miejscowości. Szybki dojazd w 15–20 minut." />
     <meta property="og:url" content="https://www.holwar.pl/lokalizacje.php" />
     <meta property="og:image" content="https://www.holwar.pl/img/holwar-hero-1360.webp" />
     <meta property="og:type" content="website" />
@@ -219,7 +219,7 @@
         <!-- Hero Section -->
         <?php render_holwar_hero(
             'Obszar Działania Pomoc Drogowa 24H',
-            'Całodobowa pomoc drogowa, holowanie i laweta w 236 miastach i miejscowościach. Szybki dojazd w 15–20 minut: Warszawa (wszystkie dzielnice), Garwolin, Mińsk Mazowiecki, Otwock, Piaseczno, Ryki oraz wzdłuż tras S17, S8, A2, DK50 i w całej Polsce.'
+            'Całodobowa pomoc drogowa, holowanie i laweta w 188 miastach i miejscowościach. Szybki dojazd w 15–20 minut: Warszawa (wszystkie dzielnice), Garwolin, Mińsk Mazowiecki, Otwock, Piaseczno, Ryki oraz wzdłuż tras S17, S8, A2, DK50 i w całej Polsce.'
         ); ?>
 
         <?php
@@ -531,7 +531,7 @@
     </main>
 
     <script>
-        // Instant search and filter for 236 locations
+        // Instant search and filter for locations
         (function () {
             const searchInput = document.getElementById('loc-search');
             const clearBtn = document.getElementById('loc-clear');
