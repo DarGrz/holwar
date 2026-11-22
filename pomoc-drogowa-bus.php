@@ -201,6 +201,7 @@
                         href="oferta.php" data-i18n="nav.oferta">Oferta</a>
                     <a class="text-sm font-semibold hover:text-primary transition-colors"
                         href="index.php#reviews" data-i18n="nav.reviews">Opinie</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="lokalizacje.php">Lokalizacje</a>
                 </nav>
                 <div class="flex items-center gap-2 sm:gap-4">
                     <div class="lang-switch hidden md:inline-flex items-center p-0.5 rounded-xl bg-white/5 border border-slate-200 dark:border-white/10 text-xs font-bold" role="group" aria-label="Wybór języka / Language selection">

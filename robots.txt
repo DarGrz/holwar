@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Sitemap: https://www.holwar.pl/sitemap.xml
 Sitemap: https://www.holwar.pl/sitemap.php

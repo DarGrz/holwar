@@ -40,6 +40,7 @@
                 <h5 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary" data-i18n="footer.company_col">Firma</h5>
                 <ul class="space-y-4 text-sm text-slate-400">
                     <li><a class="hover:text-white transition-colors" href="index.php#about" data-i18n="nav.about">O nas</a></li>
+                    <li><a class="hover:text-white transition-colors" href="lokalizacje.php">Obszar działania (236 miejscowości)</a></li>
                     <li><a class="hover:text-white transition-colors" href="#" data-i18n="footer.partner_program">Program Partnerski</a></li>
                     <li><a class="hover:text-white transition-colors" href="oferta.php" data-i18n="nav.oferta">Oferta</a></li>
                     <li><a class="hover:text-white transition-colors" href="polityka-prywatnosci.php" data-i18n="footer.privacy_policy">Polityka
@@ -68,42 +69,66 @@
             </div>
         </div>
         <div class="border-t border-white/5 py-12">
-            <h6 class="text-xs font-bold uppercase tracking-widest text-primary mb-8 text-center" data-i18n="footer.area_heading">Obszar działania -
-                Pomoc Drogowa i Laweta</h6>
-            <div
-                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-4 text-[10px] text-slate-500 uppercase font-semibold">
-                <!-- Warsaw Districts -->
-                <a href="pomoc-drogowa-bemowo.php" class="hover:text-primary transition-colors">• Bemowo</a>
-                <a href="pomoc-drogowa-bialoleka.php" class="hover:text-primary transition-colors">• Białołęka</a>
-                <a href="pomoc-drogowa-bielany.php" class="hover:text-primary transition-colors">• Bielany</a>
-                <a href="pomoc-drogowa-mokotow.php" class="hover:text-primary transition-colors">• Mokotów</a>
-                <a href="pomoc-drogowa-ochota.php" class="hover:text-primary transition-colors">• Ochota</a>
-                <a href="pomoc-drogowa-praga-poludnie.php" class="hover:text-primary transition-colors">• Praga
-                    Południe</a>
-                <a href="pomoc-drogowa-praga-polnoc.php" class="hover:text-primary transition-colors">• Praga Północ</a>
-                <a href="pomoc-drogowa-rembertow.php" class="hover:text-primary transition-colors">• Rembertów</a>
-                <a href="pomoc-drogowa-srodmiescie.php" class="hover:text-primary transition-colors">• Śródmieście</a>
-                <a href="pomoc-drogowa-targowek.php" class="hover:text-primary transition-colors">• Targówek</a>
-                <a href="pomoc-drogowa-ursus.php" class="hover:text-primary transition-colors">• Ursus</a>
-                <a href="pomoc-drogowa-ursynow.php" class="hover:text-primary transition-colors">• Ursynów</a>
-                <a href="pomoc-drogowa-wawer.php" class="hover:text-primary transition-colors">• Wawer</a>
-                <a href="pomoc-drogowa-wesola.php" class="hover:text-primary transition-colors">• Wesoła</a>
-                <a href="pomoc-drogowa-wilanow.php" class="hover:text-primary transition-colors">• Wilanów</a>
-                <a href="pomoc-drogowa-wlochy.php" class="hover:text-primary transition-colors">• Włochy</a>
-                <a href="pomoc-drogowa-wola.php" class="hover:text-primary transition-colors">• Wola</a>
-                <a href="pomoc-drogowa-zoliborz.php" class="hover:text-primary transition-colors">• Żoliborz</a>
-                <!-- Surrounding towns -->
-                <a href="pomoc-drogowa-otwock.php" class="hover:text-primary transition-colors">• Otwock</a>
-                <a href="pomoc-drogowa-minsk-mazowiecki.php" class="hover:text-primary transition-colors">• Mińsk
-                    Maz.</a>
-                <a href="pomoc-drogowa-garwolin.php" class="hover:text-primary transition-colors">• Garwolin</a>
-                <a href="pomoc-drogowa-kolbiel.php" class="hover:text-primary transition-colors">• Kołbiel</a>
-                <a href="pomoc-drogowa-jozefow.php" class="hover:text-primary transition-colors">• Józefów</a>
-                <a href="pomoc-drogowa-gora-kalwaria.php" class="hover:text-primary transition-colors">• Góra
-                    Kalwaria</a>
-                <a href="pomoc-drogowa-ryki.php" class="hover:text-primary transition-colors">• Ryki</a>
-                <a href="pomoc-drogowa-piaseczno.php" class="hover:text-primary transition-colors">• Piaseczno</a>
-                <a href="pomoc-drogowa-sulejowek.php" class="hover:text-primary transition-colors">• Sulejówek</a>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+                <div>
+                    <h6 class="text-xs font-bold uppercase tracking-widest text-primary" data-i18n="footer.area_heading">Obszar działania - Pomoc Drogowa i Laweta</h6>
+                    <p class="text-xs text-slate-400 mt-1">Szybki dojazd 15–20 minut • Warszawa, trasy wylotowe S17, S8, A2, DK50 oraz 236 miejscowości</p>
+                </div>
+                <a href="lokalizacje.php" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/10 border border-primary/30 text-primary hover:bg-primary hover:text-background-dark text-xs font-bold uppercase tracking-wider transition-all shrink-0">
+                    <span>Wszystkie Miejscowości (236)</span>
+                    <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="space-y-6">
+                <div>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-3">Dzielnice Warszawy:</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-2.5 text-[11px] text-slate-400 font-medium">
+                        <a href="pomoc-drogowa-bemowo.php" class="hover:text-primary transition-colors">• Bemowo</a>
+                        <a href="pomoc-drogowa-bialoleka.php" class="hover:text-primary transition-colors">• Białołęka</a>
+                        <a href="pomoc-drogowa-bielany.php" class="hover:text-primary transition-colors">• Bielany</a>
+                        <a href="pomoc-drogowa-mokotow.php" class="hover:text-primary transition-colors">• Mokotów</a>
+                        <a href="pomoc-drogowa-ochota.php" class="hover:text-primary transition-colors">• Ochota</a>
+                        <a href="pomoc-drogowa-praga-poludnie.php" class="hover:text-primary transition-colors">• Praga Południe</a>
+                        <a href="pomoc-drogowa-praga-polnoc.php" class="hover:text-primary transition-colors">• Praga Północ</a>
+                        <a href="pomoc-drogowa-rembertow.php" class="hover:text-primary transition-colors">• Rembertów</a>
+                        <a href="pomoc-drogowa-srodmiescie.php" class="hover:text-primary transition-colors">• Śródmieście</a>
+                        <a href="pomoc-drogowa-targowek.php" class="hover:text-primary transition-colors">• Targówek</a>
+                        <a href="pomoc-drogowa-ursus.php" class="hover:text-primary transition-colors">• Ursus</a>
+                        <a href="pomoc-drogowa-ursynow.php" class="hover:text-primary transition-colors">• Ursynów</a>
+                        <a href="pomoc-drogowa-wawer.php" class="hover:text-primary transition-colors">• Wawer</a>
+                        <a href="pomoc-drogowa-wesola.php" class="hover:text-primary transition-colors">• Wesoła</a>
+                        <a href="pomoc-drogowa-wilanow.php" class="hover:text-primary transition-colors">• Wilanów</a>
+                        <a href="pomoc-drogowa-wlochy.php" class="hover:text-primary transition-colors">• Włochy</a>
+                        <a href="pomoc-drogowa-wola.php" class="hover:text-primary transition-colors">• Wola</a>
+                        <a href="pomoc-drogowa-zoliborz.php" class="hover:text-primary transition-colors">• Żoliborz</a>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-3">Trasa S17 / S8 / A2 / DK50 i Okolice:</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-2.5 text-[11px] text-slate-400 font-medium">
+                        <a href="pomoc-drogowa-garwolin.php" class="hover:text-primary transition-colors font-semibold text-slate-300">• Garwolin (S17)</a>
+                        <a href="pomoc-drogowa-kolbiel.php" class="hover:text-primary transition-colors">• Kołbiel (S17/DK50)</a>
+                        <a href="pomoc-drogowa-ryki.php" class="hover:text-primary transition-colors">• Ryki (S17)</a>
+                        <a href="pomoc-drogowa-minsk-mazowiecki.php" class="hover:text-primary transition-colors">• Mińsk Maz. (A2)</a>
+                        <a href="pomoc-drogowa-otwock.php" class="hover:text-primary transition-colors">• Otwock</a>
+                        <a href="pomoc-drogowa-piaseczno.php" class="hover:text-primary transition-colors">• Piaseczno (S7)</a>
+                        <a href="pomoc-drogowa-jozefow.php" class="hover:text-primary transition-colors">• Józefów</a>
+                        <a href="pomoc-drogowa-gora-kalwaria.php" class="hover:text-primary transition-colors">• Góra Kalwaria (DK50)</a>
+                        <a href="pomoc-drogowa-sulejowek.php" class="hover:text-primary transition-colors">• Sulejówek</a>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p class="text-xs text-slate-400">
+                        Szukasz pomocy drogowej w innej miejscowości? Posiadamy bazy i patrole w ponad 230 lokalizacjach.
+                    </p>
+                    <a href="lokalizacje.php" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline underline-offset-4 shrink-0">
+                        <span>Przejdź do pełnego indeksu miejscowości (A–Z)</span>
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="border-t border-white/5 pt-10 text-center">

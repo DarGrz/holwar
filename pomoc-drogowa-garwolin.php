@@ -60,6 +60,34 @@
       }
     }
     </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona Główna",
+          "item": "https://www.holwar.pl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Obszar Działania",
+          "item": "https://www.holwar.pl/lokalizacje.php"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pomoc Drogowa Garwolin",
+          "item": "https://www.holwar.pl/pomoc-drogowa-garwolin.php"
+        }
+      ]
+    }
+    </script>
     <style>
         @keyframes pulse-cta {
             0% {
@@ -106,6 +134,7 @@
                         działa</a>
                     <a class="text-sm font-semibold hover:text-primary transition-colors"
                         href="index.php#reviews">Opinie</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="lokalizacje.php">Lokalizacje</a>
                     <a class="text-sm font-semibold hover:text-primary transition-colors" href="index.php#about">O
                         nas</a>
                 </nav>
@@ -125,6 +154,18 @@
     </header>
 
     <main>
+        <!-- Breadcrumbs -->
+        <nav aria-label="Nawigacja okruszkowa"
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2 text-xs text-slate-500">
+            <ol class="flex items-center flex-wrap gap-2">
+                <li><a href="index.php" class="hover:text-primary transition-colors">Strona Główna</a></li>
+                <li><span class="text-slate-600">/</span></li>
+                <li><a href="lokalizacje.php" class="hover:text-primary transition-colors">Obszar Działania</a></li>
+                <li><span class="text-slate-600">/</span></li>
+                <li class="text-primary font-semibold" aria-current="page">Pomoc Drogowa Garwolin</li>
+            </ol>
+        </nav>
+
         <!-- Hero Section -->
         <?php render_holwar_hero(
             'POMOC DROGOWA GARWOLIN',
@@ -348,6 +389,88 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nearby & Related Locations Internal Linking -->
+        <section class="py-16 border-t border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-card-dark/40" id="nearby-locations">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-800 uppercase italic">Obsługiwane Miejscowości w Pobliżu Garwolina</h3>
+                        <p class="text-xs sm:text-sm text-slate-500">Ekspresowy dojazd lawety na trasie S17 oraz w sąsiednich miastach i gminach:</p>
+                    </div>
+                    <a href="lokalizacje.php" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/10 border border-primary/30 text-primary hover:bg-primary hover:text-background-dark text-xs font-bold uppercase tracking-wider transition-all shrink-0">
+                        <span>Wszystkie Lokalizacje (236)</span>
+                        <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+                    <a href="pomoc-drogowa-kolbiel.php"
+                        class="p-4 rounded-2xl bg-white dark:bg-card-dark border border-slate-200 dark:border-white/5 hover:border-primary hover:shadow-md transition-all group flex flex-col justify-between">
+                        <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                            Kołbiel (S17/DK50)
+                            <span class="material-symbols-outlined text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                        </span>
+                        <span class="text-[11px] text-slate-400 mt-2 font-medium">Pomoc Drogowa 24H</span>
+                    </a>
+                    <a href="pomoc-drogowa-ryki.php"
+                        class="p-4 rounded-2xl bg-white dark:bg-card-dark border border-slate-200 dark:border-white/5 hover:border-primary hover:shadow-md transition-all group flex flex-col justify-between">
+                        <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                            Ryki (S17)
+                            <span class="material-symbols-outlined text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                        </span>
+                        <span class="text-[11px] text-slate-400 mt-2 font-medium">Pomoc Drogowa 24H</span>
+                    </a>
+                    <a href="pomoc-drogowa-otwock.php"
+                        class="p-4 rounded-2xl bg-white dark:bg-card-dark border border-slate-200 dark:border-white/5 hover:border-primary hover:shadow-md transition-all group flex flex-col justify-between">
+                        <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                            Otwock
+                            <span class="material-symbols-outlined text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                        </span>
+                        <span class="text-[11px] text-slate-400 mt-2 font-medium">Pomoc Drogowa 24H</span>
+                    </a>
+                    <a href="pomoc-drogowa-minsk-mazowiecki.php"
+                        class="p-4 rounded-2xl bg-white dark:bg-card-dark border border-slate-200 dark:border-white/5 hover:border-primary hover:shadow-md transition-all group flex flex-col justify-between">
+                        <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                            Mińsk Mazowiecki (A2)
+                            <span class="material-symbols-outlined text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                        </span>
+                        <span class="text-[11px] text-slate-400 mt-2 font-medium">Pomoc Drogowa 24H</span>
+                    </a>
+                    <a href="pomoc-drogowa-gora-kalwaria.php"
+                        class="p-4 rounded-2xl bg-white dark:bg-card-dark border border-slate-200 dark:border-white/5 hover:border-primary hover:shadow-md transition-all group flex flex-col justify-between">
+                        <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                            Góra Kalwaria (DK50)
+                            <span class="material-symbols-outlined text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                        </span>
+                        <span class="text-[11px] text-slate-400 mt-2 font-medium">Pomoc Drogowa 24H</span>
+                    </a>
+                    <a href="pomoc-drogowa-piaseczno.php"
+                        class="p-4 rounded-2xl bg-white dark:bg-card-dark border border-slate-200 dark:border-white/5 hover:border-primary hover:shadow-md transition-all group flex flex-col justify-between">
+                        <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                            Piaseczno
+                            <span class="material-symbols-outlined text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                        </span>
+                        <span class="text-[11px] text-slate-400 mt-2 font-medium">Pomoc Drogowa 24H</span>
+                    </a>
+                    <a href="pomoc-drogowa-jozefow.php"
+                        class="p-4 rounded-2xl bg-white dark:bg-card-dark border border-slate-200 dark:border-white/5 hover:border-primary hover:shadow-md transition-all group flex flex-col justify-between">
+                        <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                            Józefów
+                            <span class="material-symbols-outlined text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                        </span>
+                        <span class="text-[11px] text-slate-400 mt-2 font-medium">Pomoc Drogowa 24H</span>
+                    </a>
+                    <a href="pomoc-drogowa-sulejowek.php"
+                        class="p-4 rounded-2xl bg-white dark:bg-card-dark border border-slate-200 dark:border-white/5 hover:border-primary hover:shadow-md transition-all group flex flex-col justify-between">
+                        <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                            Sulejówek
+                            <span class="material-symbols-outlined text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                        </span>
+                        <span class="text-[11px] text-slate-400 mt-2 font-medium">Pomoc Drogowa 24H</span>
+                    </a>
                 </div>
             </div>
         </section>

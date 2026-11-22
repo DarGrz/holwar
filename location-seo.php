@@ -89,6 +89,34 @@ function render_location_page($location, $slug)
         }
         </script>
 
+        <!-- BreadcrumbList Schema -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona Główna",
+              "item": "https://www.holwar.pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Obszar Działania",
+              "item": "https://www.holwar.pl/lokalizacje.php"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Pomoc Drogowa <?php echo htmlspecialchars($location, ENT_QUOTES, 'UTF-8'); ?>",
+              "item": "<?php echo $canonical; ?>"
+            }
+          ]
+        }
+        </script>
+
         <!-- FAQ Schema -->
         <script type="application/ld+json">
                                     {
@@ -193,6 +221,7 @@ function render_location_page($location, $slug)
                         <a class="text-sm font-semibold hover:text-primary transition-colors" href="index.php#faq" data-i18n="nav.faq">FAQ</a>
                         <a class="text-sm font-semibold hover:text-primary transition-colors"
                             href="index.php#reviews" data-i18n="nav.reviews">Opinie</a>
+                        <a class="text-sm font-semibold hover:text-primary transition-colors" href="lokalizacje.php">Lokalizacje</a>
                     </nav>
                     <div class="flex items-center gap-2 sm:gap-4">
                         <div class="lang-switch hidden md:inline-flex items-center p-0.5 rounded-xl bg-white/5 border border-slate-200 dark:border-white/10 text-xs font-bold" role="group" aria-label="Wybór języka / Language selection">
@@ -211,6 +240,18 @@ function render_location_page($location, $slug)
         </header>
 
         <main>
+            <!-- Breadcrumbs -->
+            <nav aria-label="Nawigacja okruszkowa"
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2 text-xs text-slate-500">
+                <ol class="flex items-center flex-wrap gap-2">
+                    <li><a href="index.php" class="hover:text-primary transition-colors">Strona Główna</a></li>
+                    <li><span class="text-slate-600">/</span></li>
+                    <li><a href="lokalizacje.php" class="hover:text-primary transition-colors">Obszar Działania</a></li>
+                    <li><span class="text-slate-600">/</span></li>
+                    <li class="text-primary font-semibold" aria-current="page">Pomoc Drogowa <?php echo htmlspecialchars($location, ENT_QUOTES, 'UTF-8'); ?></li>
+                </ol>
+            </nav>
+
             <!-- Hero Section -->
             <?php render_holwar_hero(
                 "Pomoc Drogowa $location 24H",
@@ -494,6 +535,84 @@ function render_location_page($location, $slug)
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <?php
+            $related = [];
+            $allSlugs = array_keys($locations_db);
+            $warsawSlugs = [
+                'bemowo', 'bialoleka', 'bielany', 'mokotow', 'ochota',
+                'praga-poludnie', 'praga-polnoc', 'rembertow', 'srodmiescie',
+                'targowek', 'ursus', 'ursynow', 'wawer', 'wesola',
+                'wilanow', 'wlochy', 'wola', 'zoliborz'
+            ];
+
+            if (in_array($slug, $warsawSlugs, true)) {
+                foreach ($warsawSlugs as $ws) {
+                    if ($ws !== $slug && isset($locations_db[$ws])) {
+                        $related[$ws] = $locations_db[$ws];
+                    }
+                    if (count($related) >= 6) break;
+                }
+                foreach (['otwock', 'piaseczno', 'garwolin', 'minsk-mazowiecki'] as $cs) {
+                    if (isset($locations_db[$cs]) && !isset($related[$cs])) {
+                        $related[$cs] = $locations_db[$cs];
+                    }
+                    if (count($related) >= 8) break;
+                }
+            } else {
+                if (!empty($district) && $district !== 'Pozostałe' && $district !== 'Inne') {
+                    foreach ($locations_db as $sKey => $sVal) {
+                        if ($sKey !== $slug && ($sVal['district'] ?? '') === $district) {
+                            $related[$sKey] = $sVal;
+                            if (count($related) >= 8) break;
+                        }
+                    }
+                }
+                $transitHubs = ['garwolin', 'ryki', 'kolbiel', 'otwock', 'minsk-mazowiecki', 'piaseczno', 'gora-kalwaria', 'bemowo'];
+                foreach ($transitHubs as $th) {
+                    if ($th !== $slug && isset($locations_db[$th]) && !isset($related[$th])) {
+                        $related[$th] = $locations_db[$th];
+                    }
+                    if (count($related) >= 8) break;
+                }
+                $currentIndex = array_search($slug, $allSlugs, true);
+                if ($currentIndex !== false) {
+                    for ($i = 1; count($related) < 8 && $i < count($allSlugs); $i++) {
+                        $nextSlug = $allSlugs[($currentIndex + $i) % count($allSlugs)];
+                        if ($nextSlug !== $slug && !isset($related[$nextSlug])) {
+                            $related[$nextSlug] = $locations_db[$nextSlug];
+                        }
+                    }
+                }
+            }
+            ?>
+            <!-- Nearby & Related Locations Internal Linking -->
+            <section class="py-16 border-t border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-card-dark/40" id="nearby-locations">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-800 uppercase italic">Obsługiwane Miejscowości w Pobliżu</h3>
+                            <p class="text-xs sm:text-sm text-slate-500">Sprawdź naszą ofertę lawety, holowania oraz mobilnego serwisu TIR i BUS w sąsiednich rejonach:</p>
+                        </div>
+                        <a href="lokalizacje.php" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/10 border border-primary/30 text-primary hover:bg-primary hover:text-background-dark text-xs font-bold uppercase tracking-wider transition-all shrink-0">
+                            <span>Wszystkie Lokalizacje (236)</span>
+                            <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+                        <?php foreach ($related as $relSlug => $relLoc): ?>
+                            <a href="pomoc-drogowa-<?php echo $relSlug; ?>.php"
+                                class="p-4 rounded-2xl bg-white dark:bg-card-dark border border-slate-200 dark:border-white/5 hover:border-primary hover:shadow-md transition-all group flex flex-col justify-between">
+                                <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                                    <?php echo htmlspecialchars($relLoc['name'], ENT_QUOTES, 'UTF-8'); ?>
+                                    <span class="material-symbols-outlined text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                                </span>
+                                <span class="text-[11px] text-slate-400 mt-2 font-medium">Pomoc Drogowa 24H</span>
+                            </a>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </section>

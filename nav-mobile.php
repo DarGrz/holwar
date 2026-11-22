@@ -45,6 +45,10 @@
                 <span class="material-symbols-outlined text-primary">info</span> <span data-i18n="nav.about">O nas</span>
             </a>
             <a class="mobile-nav-link text-lg font-bold text-slate-300 hover:text-primary transition-colors flex items-center gap-4 py-2"
+                href="lokalizacje.php">
+                <span class="material-symbols-outlined text-primary">location_city</span> <span>Obszar Działania (236)</span>
+            </a>
+            <a class="mobile-nav-link text-lg font-bold text-slate-300 hover:text-primary transition-colors flex items-center gap-4 py-2"
                 href="autokasacja.php">
                 <span class="material-symbols-outlined text-primary">car_crash</span> <span data-i18n="nav.autokasacja">Autokasacja</span>
             </a>

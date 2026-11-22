@@ -168,6 +168,7 @@
                         href="index.php#how-it-works" data-i18n="nav.how_it_works">Jak to działa</a>
                     <a class="text-sm font-semibold hover:text-primary transition-colors"
                         href="index.php#reviews" data-i18n="nav.reviews">Opinie</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="lokalizacje.php">Lokalizacje</a>
                     <a class="text-sm font-semibold hover:text-primary transition-colors" href="index.php#about" data-i18n="nav.about">O nas</a>
                 </nav>
                 <div class="flex items-center gap-2 sm:gap-4">
