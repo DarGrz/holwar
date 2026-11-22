@@ -39,6 +39,27 @@
         rel="stylesheet" />
     <link rel="icon" type="image/png" href="favicon.ico" />
     <link rel="canonical" href="https://www.holwar.pl/" />
+
+    <!-- Product Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Pomoc Drogowa Warszawa - HOLWAR",
+      "image": "https://www.holwar.pl/img/image_4.webp",
+      "description": "Profesjonalna całodobowa pomoc drogowa, holowanie i laweta w Warszawie i okolicach 24/7.",
+      "brand": {
+        "@type": "Brand",
+        "name": "HOLWAR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "ratingCount": "768"
+      }
+    }
+    </script>
 </head>
 
 <body

@@ -3,7 +3,7 @@ function render_holwar_hero_head(string $image = 'holwar-hero', int $imageWidth 
 {
     $image = htmlspecialchars($image, ENT_QUOTES, 'UTF-8');
     ?>
-    <link rel="stylesheet" href="hero.css?v=2" />
+    <link rel="stylesheet" href="hero.css?v=3" />
     <link rel="preload" as="image" href="img/<?php echo $image; ?>-<?php echo $imageWidth; ?>.webp"
         imagesrcset="img/<?php echo $image; ?>-480.webp 480w, img/<?php echo $image; ?>-768.webp 768w, img/<?php echo $image; ?>-<?php echo $imageWidth; ?>.webp <?php echo $imageWidth; ?>w"
         imagesizes="(min-width: 1280px) 1216px, (min-width: 640px) calc(100vw - 48px), calc(100vw - 16px)"

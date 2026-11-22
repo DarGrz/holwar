@@ -50,35 +50,41 @@
         <priority>0.9</priority>
     </url>
     <?php
-    $pages = [
-        "bemowo",
-        "bialoleka",
-        "bielany",
-        "mokotow",
-        "ochota",
-        "praga-poludnie",
-        "praga-polnoc",
-        "rembertow",
-        "srodmiescie",
-        "targowek",
-        "ursus",
-        "ursynow",
-        "wawer",
-        "wesola",
-        "wilanow",
-        "wlochy",
-        "wola",
-        "zoliborz",
-        "otwock",
-        "minsk-mazowiecki",
-        "garwolin",
-        "kolbiel",
-        "jozefow",
-        "gora-kalwaria",
-        "ryki",
-        "piaseczno",
-        "sulejowek"
-    ];
+    $locations_file = __DIR__ . '/data/locations.php';
+    if (file_exists($locations_file)) {
+        $locations_db = require $locations_file;
+        $pages = array_keys($locations_db);
+    } else {
+        $pages = [
+            "bemowo",
+            "bialoleka",
+            "bielany",
+            "mokotow",
+            "ochota",
+            "praga-poludnie",
+            "praga-polnoc",
+            "rembertow",
+            "srodmiescie",
+            "targowek",
+            "ursus",
+            "ursynow",
+            "wawer",
+            "wesola",
+            "wilanow",
+            "wlochy",
+            "wola",
+            "zoliborz",
+            "otwock",
+            "minsk-mazowiecki",
+            "garwolin",
+            "kolbiel",
+            "jozefow",
+            "gora-kalwaria",
+            "ryki",
+            "piaseczno",
+            "sulejowek"
+        ];
+    }
     foreach ($pages as $slug) {
         echo "    <url>\n";
         echo "        <loc>https://www.holwar.pl/pomoc-drogowa-$slug.php</loc>\n";

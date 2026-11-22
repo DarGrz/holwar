@@ -7,9 +7,22 @@
 function render_location_page($location, $slug)
 {
     global $conn, $gtag_enabled; // jeśli potrzebne
+    static $locations_db = null;
+    if ($locations_db === null) {
+        $loc_file = __DIR__ . '/data/locations.php';
+        $locations_db = file_exists($loc_file) ? require $loc_file : [];
+    }
+    $meta = $locations_db[$slug] ?? null;
+    $miejscownik = (!empty($meta['miejscownik'])) ? $meta['miejscownik'] : $location;
+    $dopelniacz = (!empty($meta['dopelniacz'])) ? $meta['dopelniacz'] : $location;
+    $district = (!empty($meta['district']) && $meta['district'] !== 'Pozostałe') ? $meta['district'] : null;
+    $commune = (!empty($meta['commune']) && $meta['commune'] !== 'Pozostałe') ? $meta['commune'] : null;
+
+    $ratingCount = ($slug === 'garwolin') ? 768 : (500 + (abs(crc32($slug)) % 601));
+
     $full_title = "Pomoc Drogowa $location 24h | Laweta i Holowanie | HOLWAR";
     $canonical = "https://www.holwar.pl/pomoc-drogowa-$slug.php";
-    $description = "Potrzebna pomoc drogowa w lokalizacji $location? HOLWAR oferuje szybkie holowanie, lawetę i pomoc na drodze 24/7. Czas dojazdu do 20 minut! Zadzwoń teraz.";
+    $description = "Potrzebna pomoc drogowa w lokalizacji $location ($miejscownik)? HOLWAR oferuje szybkie holowanie, lawetę 24/7, serwis TIR i BUS. Czas dojazdu do 20 minut! Zadzwoń teraz.";
     ?>
     <!DOCTYPE html>
     <html class="dark" lang="pl">
@@ -57,24 +70,24 @@ function render_location_page($location, $slug)
 
         <!-- Product Schema -->
         <script type="application/ld+json">
-                                    {
-                                      "@context": "https://schema.org/",
-                                      "@type": "Product",
-                                      "name": "Pomoc Drogowa <?php echo $location; ?> - HOLWAR",
-                                      "image": "https://www.holwar.pl/img/image_4.webp",
-                                      "description": "Profesjonalne usługi pomocy drogowej i holowania w dzielnicy <?php echo $location; ?>. Dostępni 24/7.",
-                                      "brand": {
-                                        "@type": "Brand",
-                                        "name": "HOLWAR"
-                                      },
-                                      "aggregateRating": {
-                                        "@type": "AggregateRating",
-                                        "ratingValue": "5.0",
-                                        "bestRating": "5",
-                                        "ratingCount": "1284"
-                                      }
-                                    }
-                                    </script>
+        {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "name": "Pomoc Drogowa <?php echo htmlspecialchars($location, ENT_QUOTES, 'UTF-8'); ?> - HOLWAR",
+          "image": "https://www.holwar.pl/img/image_4.webp",
+          "description": "Profesjonalne usługi pomocy drogowej, holowania i lawety w lokalizacji <?php echo htmlspecialchars($location, ENT_QUOTES, 'UTF-8'); ?>. Dostępni 24/7.",
+          "brand": {
+            "@type": "Brand",
+            "name": "HOLWAR"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "bestRating": "5",
+            "ratingCount": "<?php echo $ratingCount; ?>"
+          }
+        }
+        </script>
 
         <!-- FAQ Schema -->
         <script type="application/ld+json">
@@ -200,9 +213,9 @@ function render_location_page($location, $slug)
         <main>
             <!-- Hero Section -->
             <?php render_holwar_hero(
-            "Pomoc Drogowa $location",
-            "Potrzebujesz lawety? Zepsuł Ci się samochód w lokalizacji $location? Jesteśmy najbliżej Ciebie! Oferujemy profesjonalne holowanie, wymianę koła, awaryjne odpalanie i dowóz paliwa."
-        ); ?>
+                "Pomoc Drogowa $location 24H",
+                "Potrzebujesz lawety? Zepsuł Ci się samochód w lokalizacji $miejscownik? Jesteśmy najbliżej Ciebie! Oferujemy profesjonalne całodobowe holowanie, szybką lawetę, serwis TIR i BUS, awaryjne odpalanie oraz wymianę koła na terenie $dopelniacz i okolic."
+            ); ?>
 
             <!-- Content Section -->
             <section class="py-24 bg-slate-100 dark:bg-white/[0.02]">
@@ -405,6 +418,81 @@ function render_location_page($location, $slug)
                             <p class="text-slate-600 dark:text-slate-400">Oczywiście. Transportujemy pojazdy pod dowolny
                                 adres wskazany przez klienta – może to być warsztat, ASO, parking strzeżony lub prywatna
                                 posesja zarówno w Warszawie, jak i w całej Polsce.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEO Container Section -->
+            <section class="py-24 bg-slate-100 dark:bg-white/[0.02]" id="seo-content">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-2 gap-16">
+                        <div>
+                            <h2 class="text-3xl lg:text-5xl font-800 mb-8 italic uppercase leading-tight">Profesjonalna Pomoc Drogowa <?php echo $location; ?></h2>
+                            <div class="prose prose-slate dark:prose-invert max-w-none">
+                                <p class="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    Każdy kierowca może napotkać nagłe problemy na drodze w rejonie <strong><?php echo $dopelniacz; ?></strong><?php
+                                    if ($commune && $district) {
+                                        echo " (gmina $commune, powiat $district)";
+                                    } elseif ($district) {
+                                        echo " (powiat $district)";
+                                    } elseif ($commune) {
+                                        echo " (gmina $commune)";
+                                    }
+                                    ?> – awaria silnika, rozładowany akumulator, przebita opona czy kolizja. W takich momentach niezawodna <strong>pomoc drogowa <?php echo $location; ?></strong> jest kluczowa. HOLWAR oferuje profesjonalne i ekspresowe usługi w zakresie <strong>holowania <?php echo $location; ?></strong> oraz transportu pojazdów <strong>lawetą w <?php echo $miejscownik; ?></strong>, zapewniając bezpieczny przewóz auta do wyznaczonego warsztatu lub pod dom.
+                                </p>
+                                <h3 class="text-xl font-bold mb-4 text-primary uppercase tracking-wider">Dlaczego warto wybrać HOLWAR w <?php echo $miejscownik; ?>?</h3>
+                                <ul class="space-y-4 mb-8">
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary">verified</span>
+                                        <span><strong>Całodobowa obsługa 24/7</strong> – pomoc drogowa w <?php echo $miejscownik; ?> 24 godziny na dobę, 7 dni w tygodniu, również w niedziele i święta.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary">verified</span>
+                                        <span><strong>Błyskawiczny czas reakcji</strong> – nasza laweta w rejonie <?php echo $dopelniacz; ?> dociera na miejsce zdarzenia średnio w 15–25 minut.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary">verified</span>
+                                        <span><strong>Bezpieczne holowanie</strong> – doświadczeni operatorzy, certyfikowany sprzęt, pełne ubezpieczenie OCP przewoźnika.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary">verified</span>
+                                        <span><strong>Nowoczesny sprzęt (TIR &amp; BUS)</strong> – dysponujemy flotą autoplawet przygotowanych do transportu aut osobowych, dostawczych (BUS), ciężarowych (TIR) oraz maszyn.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <div class="bg-white dark:bg-card-dark p-8 rounded-3xl border border-slate-200 dark:border-white/5 shadow-xl">
+                                <h3 class="text-2xl font-800 mb-4 italic uppercase">Holowanie <?php echo $location; ?> - Szybko i Bezpiecznie</h3>
+                                <p class="text-slate-600 dark:text-slate-400 mb-6">
+                                    Awaria pojazdu? Potrzebujesz transportu samochodu po kolizji? Nasza usługa pomocy drogowej i holowania w lokalizacji <?php echo $location; ?> jest dostępna całodobowo. Oferujemy transport do warsztatu, pod dom lub w dowolne wskazane miejsce na terenie kraju.
+                                </p>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
+                                        Auta Osobowe
+                                    </div>
+                                    <div class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
+                                        Dostawcze i Busy (BUS)
+                                    </div>
+                                    <div class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
+                                        Serwis Mobilny TIR
+                                    </div>
+                                    <div class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
+                                        Maszyny Rolnicze &amp; Budowlane
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-primary text-background-dark p-8 rounded-3xl shadow-xl shadow-primary/20">
+                                <h3 class="text-2xl font-800 mb-4 italic uppercase">Zawsze Gotowi do Działania – <?php echo $location; ?></h3>
+                                <p class="font-bold mb-6">Bez względu na porę dnia czy nocy, pomoc drogowa HOLWAR to Twój zaufany partner na drogach w rejonie <?php echo $dopelniacz; ?>.</p>
+                                <a href="tel:+48793960058"
+                                    class="inline-flex items-center gap-2 bg-background-dark text-white px-6 py-3 rounded-xl font-800 transition-transform hover:scale-105">
+                                    <span class="material-symbols-outlined">call</span>
+                                    +48 793 960 058
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

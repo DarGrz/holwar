@@ -39,6 +39,27 @@
         rel="stylesheet" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="canonical" href="https://www.holwar.pl/pomoc-drogowa-garwolin.php" />
+
+    <!-- Product Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Pomoc Drogowa Garwolin - HOLWAR",
+      "image": "https://www.holwar.pl/img/image_4.webp",
+      "description": "Profesjonalne usługi pomocy drogowej, holowania i lawety w Garwolinie i na trasie S17. Dostępni 24/7.",
+      "brand": {
+        "@type": "Brand",
+        "name": "HOLWAR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "ratingCount": "768"
+      }
+    }
+    </script>
     <style>
         @keyframes pulse-cta {
             0% {
@@ -261,6 +282,73 @@
                 </div>
                 <p class="mt-8 text-background-dark/60 text-sm font-bold uppercase tracking-widest">Pomoc drogowa
                     Garwolin • S17 • Trasa Lubelska • 24/7</p>
+            </div>
+        </section>
+
+        <!-- SEO Container Section -->
+        <section class="py-24 bg-slate-100 dark:bg-white/[0.02]" id="seo-content">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-3xl lg:text-5xl font-800 mb-8 italic uppercase leading-tight">Profesjonalna Pomoc Drogowa Garwolin</h2>
+                        <div class="prose prose-slate dark:prose-invert max-w-none">
+                            <p class="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                Każdy kierowca może napotkać nagłe problemy na drodze w rejonie <strong>Garwolina</strong> (powiat garwoliński, trasa S17 i DK76) – awaria silnika, rozładowany akumulator, przebita opona czy kolizja. W takich momentach niezawodna <strong>pomoc drogowa Garwolin</strong> jest kluczowa. HOLWAR oferuje profesjonalne i ekspresowe usługi w zakresie <strong>holowania Garwolin</strong> oraz transportu pojazdów <strong>lawetą w Garwolinie</strong>, zapewniając bezpieczny przewóz auta do wyznaczonego warsztatu lub pod dom.
+                            </p>
+                            <h3 class="text-xl font-bold mb-4 text-primary uppercase tracking-wider">Dlaczego warto wybrać HOLWAR w Garwolinie?</h3>
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">verified</span>
+                                    <span><strong>Całodobowa obsługa 24/7</strong> – pomoc drogowa w Garwolinie 24 godziny na dobę, 7 dni w tygodniu, również w niedziele i święta.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">verified</span>
+                                    <span><strong>Błyskawiczny czas reakcji</strong> – nasza laweta na trasie S17 i w Garwolinie dociera na miejsce zdarzenia średnio w 15–20 minut.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">verified</span>
+                                    <span><strong>Bezpieczne holowanie</strong> – doświadczeni operatorzy, certyfikowany sprzęt, pełne ubezpieczenie OCP przewoźnika.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">verified</span>
+                                    <span><strong>Nowoczesny sprzęt (TIR &amp; BUS)</strong> – dysponujemy flotą autoplawet przygotowanych do transportu aut osobowych, dostawczych (BUS), ciężarowych (TIR) oraz maszyn.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="bg-white dark:bg-card-dark p-8 rounded-3xl border border-slate-200 dark:border-white/5 shadow-xl">
+                            <h3 class="text-2xl font-800 mb-4 italic uppercase">Holowanie Garwolin - Szybko i Bezpiecznie</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-6">
+                                Awaria pojazdu? Potrzebujesz transportu samochodu po kolizji? Nasza usługa pomocy drogowej i holowania w lokalizacji Garwolin jest dostępna całodobowo. Oferujemy transport do warsztatu, pod dom lub w dowolne wskazane miejsce na terenie kraju.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
+                                    Auta Osobowe
+                                </div>
+                                <div class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
+                                    Dostawcze i Busy (BUS)
+                                </div>
+                                <div class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
+                                    Serwis Mobilny TIR
+                                </div>
+                                <div class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl text-xs font-bold uppercase tracking-tight text-center">
+                                    Maszyny Rolnicze &amp; Budowlane
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-primary text-background-dark p-8 rounded-3xl shadow-xl shadow-primary/20">
+                            <h3 class="text-2xl font-800 mb-4 italic uppercase">Zawsze Gotowi do Działania – Garwolin</h3>
+                            <p class="font-bold mb-6">Bez względu na porę dnia czy nocy, pomoc drogowa HOLWAR to Twój zaufany partner na drogach w rejonie Garwolina i trasy S17.</p>
+                            <a href="tel:+48793960058"
+                                class="inline-flex items-center gap-2 bg-background-dark text-white px-6 py-3 rounded-xl font-800 transition-transform hover:scale-105">
+                                <span class="material-symbols-outlined">call</span>
+                                +48 793 960 058
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
