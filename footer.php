@@ -126,7 +126,7 @@
                     </p>
                     <a href="lokalizacje.php" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline underline-offset-4 shrink-0">
                         <span>Przejdź do pełnego indeksu miejscowości (A–Z)</span>
-                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
                     </a>
                 </div>
             </div>
